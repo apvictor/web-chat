@@ -17,7 +17,7 @@ export function Messages() {
 
   function getMessages() {
     api.get(`/messages/${contactId}`)
-      .then((result) => {
+      .then((result: any) => {
         const { messages, contact } = result.data.data;
         setMessages(messages)
         setContact(contact)
