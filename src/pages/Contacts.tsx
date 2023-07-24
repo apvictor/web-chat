@@ -8,7 +8,7 @@ export function Contacts() {
 
   function getMessages() {
     api.get("/contacts")
-      .then((result) => {
+      .then((result: any) => {
         const { contacts } = result.data.data;
         console.log(contacts);
 
