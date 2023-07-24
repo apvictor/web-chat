@@ -1,0 +1,2 @@
+interface Contact extends Message {
+}
