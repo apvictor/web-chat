@@ -22,8 +22,9 @@ export function Messages() {
         setMessages(messages)
         setContact(contact)
 
-        scrollToBottom()
       })
+
+      scrollToBottom()
   }
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export function Messages() {
                 <div key={message.id + ""} className="w-full flex justify-end text-[#E1E1E6]">
                   <div className="mb-4 flex flex-col">
                     <div className="flex items-center mb-2 justify-end">
-                      <p className="text-xs ml-1">{message.from}</p>
+                      <p className="text-xs ml-1">{message.name}</p>
                       <p className="text-xs ml-1">- {helper.formatTime(message.timestamp)}</p>
                     </div>
                     <div className="p-4 justify-center bg-[#07847E] rounded-tl-lg rounded-br-none rounded-tr-lg rounded-bl-lg">
@@ -74,7 +75,7 @@ export function Messages() {
                 <div key={message.id + ""} className="w-full flex justify-start text-[#E1E1E6]">
                   <div className="mb-4 flex flex-col">
                     <div className="flex items-center mb-2 justify-start">
-                      <p className="text-xs ml-1">{message.from}</p>
+                      <p className="text-xs ml-1">{message.name}</p>
                       <p className="text-xs ml-1">- {helper.formatTime(message.timestamp)}</p>
                     </div>
 
